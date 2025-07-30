@@ -839,11 +839,12 @@ public class TestSSQV1 {
         int dimension = 4; // number of dimensions
         int minVCSize = 30; //the minimum number of entries in a single grid during space partitioning
 
-        String c1 = "c1 8001";
-        String c2 = "c2 127.0.0.1 8001 8002";
+        String c1 = "c1 8001"; // role portC1
+        String c2 = "c2 127.0.0.1 8001 8002"; // role ipC1 portC1 portC2
         String user = "user 127.0.0.1 8001 127.0.0.1 8002 " // role ipC1 portC1 ipC2 portC2
                  + testType + " 10 " + "2024 " + N + " " + dataLength + " " + dimension + " 1 " + datasetType + " " + minVCSize; //testType epoch randomSeed dataNumber dataLength dimension queryNumber dataset minVCSize
 
+        //select a role
         //args = c1.split(" ");
         //args = c2.split(" ");
         args = user.split(" ");
